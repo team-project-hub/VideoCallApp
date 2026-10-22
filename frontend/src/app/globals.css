@@ -237,7 +237,8 @@
   }
   button,
   a,
-  [role="button"] {
+  [role="button"],
+  input[type="checkbox"] {
     cursor: pointer;
   }
   body {

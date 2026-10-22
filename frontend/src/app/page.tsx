@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Code2, FileText, MessageCircle, Play, ShieldCheck, Sparkles, Video } from "lucide-react";
 import { HeroCarousel } from "@/components/hero-carousel";
-import { Navbar } from "@/components/navbar";
 import { ScrollToTop } from "@/components/scroll-to-top";
 
 const features = [
@@ -15,15 +14,14 @@ const features = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <Navbar />
-      <section className="relative isolate mx-auto min-h-[620px] w-full px-0 pb-20 pt-28 lg:pb-28 lg:pt-32">
-        <div className="absolute inset-x-0 bottom-20 top-28 overflow-hidden lg:top-32"><HeroCarousel /></div>
-        <div className="relative z-10 flex min-h-[620px] items-center justify-center px-6 py-20 text-center sm:px-12 lg:px-16">
-          <div className="animate-fade-up max-w-3xl text-white">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/20 px-3.5 py-2 text-sm font-medium backdrop-blur"><Sparkles className="h-4 w-4 text-emerald-300" /> Built for better code reviews</div>
-            <h1 className="max-w-2xl text-5xl font-semibold leading-[1.04] tracking-[-0.04em] sm:text-6xl lg:text-7xl">Turn technical talk into <span className="text-emerald-300">clear progress.</span></h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-white/75">Meetly brings video, shared code, chat, and notes into one focused workspace for developers and their teams.</p>
-            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><Link href="/sign-up" className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-emerald-400 px-6 font-medium text-slate-950 shadow-lg shadow-emerald-400/20 transition-all hover:-translate-y-1 hover:bg-emerald-300"><ArrowRight className="h-4 w-4" /> Start for free</Link><a href="#workflow" className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/25 bg-black/20 px-6 font-medium backdrop-blur transition-colors hover:bg-black/35"><Play className="h-4 w-4 text-emerald-300" /> See how it works</a></div>
+      <section className="relative isolate mx-auto min-h-[600px] w-full px-0 py-10">
+        <div className="absolute inset-x-0 bottom-10 top-10 overflow-hidden"><HeroCarousel /></div>
+        <div className="relative z-10 flex min-h-[520px] items-center justify-center px-6 py-12 text-center sm:px-12 lg:px-16">
+          <div className="animate-fade-up max-w-3xl text-primary-foreground">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-foreground/20 px-3.5 py-2 text-sm font-medium backdrop-blur"><Sparkles className="h-4 w-4 text-primary" /> Built for better code reviews</div>
+            <h1 className="max-w-2xl text-5xl font-semibold leading-[1.04] tracking-[-0.04em] sm:text-6xl lg:text-7xl">Turn technical talk into <span className="text-primary">clear progress.</span></h1>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-primary-foreground/75">Meetly brings video, shared code, chat, and notes into one focused workspace for developers and their teams.</p>
+            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><Link href="/sign-up" className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:-translate-y-1 hover:bg-primary/90"><ArrowRight className="h-4 w-4" /> Start for free</Link><a href="#workflow" className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-primary-foreground/25 bg-foreground/20 px-6 font-medium backdrop-blur transition-colors hover:bg-foreground/35"><Play className="h-4 w-4 text-primary" /> See how it works</a></div>
           </div>
         </div>
       </section>
